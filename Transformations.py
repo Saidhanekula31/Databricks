@@ -49,7 +49,7 @@ monthly_category_df = enriched_df.groupBy("month", "category") \
                                  .groupBy("month").pivot("category").sum("monthly_sales")
 
 monthly_category_df.show()
-#price Band Counts
+#price Band Counts 
 from pyspark.sql.functions import when
 
 banded_df = enriched_df.withColumn("price_band", 
